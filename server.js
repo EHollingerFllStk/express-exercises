@@ -11,7 +11,9 @@ app.get("/", (req, res) => {
 });
 
 //Exercise #1 
-
+app.get("/greeting/:name", (req, res) => {
+    res.send(`What's up ${req.params.name}?`)
+})
 
 
 app.listen(3000, () => {
