@@ -15,8 +15,15 @@ app.get("/greeting/:name", (req, res) => {
     res.send(`What's up ${req.params.name}?`)
 })
 
+//Exercise 2 Tip Calculator
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+    res.send("Your tip is $" + req.params.total * (req.params.tipPercentage/100) + ".")
+})
 
+//Set up listener
 app.listen(3000, () => {
     console.log("Express is listening!")
 })
+
+
 
